@@ -3,66 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
-  <title>Base Apparel coming soon page</title>
-  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Stats preview card component</title>
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 
   <div class="wrapper">
-    <div class="container">
-      <div class="content">
-        <div class="logo">
-          <img src="./src/images/logo.svg" alt="">
-        </div>
-        <div class="welcomeTitle">
-          <h1>We're <br><span>coming<br>soon</span></h1>
-        </div>
-        <div class="welcomeSubTitle">
-          <p>Hello fellow shoppers! We're currently building our new fashion store. 
-            Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        </div>
-        <form class="emailField">
-          <input onkeyup="Validation();" class="emailInput" type="email" placeholder="Email Address">
-          <button class="submitBtn">
-            <img src="./src/images/icon-arrow.svg" alt="">
-          </button>
-          <span class="valid" id="text">Please provide a valid email</span>
-          <img class="iconError valid" src="./src/images/icon-error.svg" alt="">
-        </form>
+    <div class="content">
+      <div class="image">
+        <img src="./images/image-header-mobile.jpg" alt="">
       </div>
-    </div>
-    <div class="image">
-      <img src="./src/images/hero-desktop.jpg">
+      <div class="details">
+        <div class="main_title">
+          <h2>Get <span>insights</span> that help your business grow.</h2>
+        </div>
+        <div class="subtitle">
+          <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+        </div>
+        <div class="container">
+          <div class="box">
+            <h3>10k+</h3>
+            <p>companies</p>
+          </div>
+          <div class="box">
+            <h3>314</h3>
+            <p>templates</p>
+          </div>
+          <div class="box">
+            <h3>12M+</h3>
+            <p>queries</p>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
 
-  <script>
-    function Validation(){
-      const emailValue = document.querySelector('.emailInput').value;
-      const email = document.querySelector('.emailInput');
-      const iconError = document.querySelector('.iconError');
-      const ProvideText = document.querySelector('#text');
-      const pattern = /@/;
 
-      if(emailValue.match(pattern)){
-        iconError.classList.remove('invalid');
-        iconError.classList.add('valid');
-        ProvideText.classList.remove('invalid');
-        ProvideText.classList.add('valid');
-        email.classList.remove('invalidInput');
-      }
-      else{
-        iconError.classList.remove('valid');
-        iconError.classList.add('invalid');
-        ProvideText.classList.remove('valid');
-        ProvideText.classList.add('invalid');
-        email.classList.add('invalidInput');
-      }
 
-    }
-
-  </script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+}
+.content {
+  margin: 15% 5%;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+.image {
+  position: relative;
+  width: 100%;
+}
+.image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 100%, 27%);
+  opacity: 0.45;
+}
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.main_title {
+  font-size: 18px;
+  text-align: center;
+  line-height: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+.main_title span {
+  color: hsl(277, 64%, 61%);
+}
+.subtitle {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 12px;
+  text-align: center;
+  margin: 0.5rem 0;
+  line-height: 1.4rem;
+}
+.container {
+  display: block;
+  margin: 0.4rem 0;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.box h3 {
+  color: hsl(0, 0%, 100%);
+}
+.box p {
+  font-size: 10px;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+}
+
+@media (min-width: 875px) {
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 11% 11%;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+  }
+  .box {
+    display: flex;
+    margin-right: 1rem;
+    align-items: start;
+  }
+  .box p {
+    margin-top: 0.4rem;
+  }
+  .details {
+    align-items: start;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    padding: 0 4rem;
+  }
+  .main_title {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+}
