@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+.wrapper {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+.image {
+  width: 40%;
+  height: 100%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
+  padding: 2rem;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.welcomeTitle {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+.welcomeTitle h1 {
+  font-weight: 100;
+  color: hsl(0, 36%, 70%);
+}
+.welcomeTitle span {
+  font-weight: 600;
+  color: hsl(0, 6%, 24%);
+}
+.welcomeSubTitle {
+  font-size: 14px;
+  color: #c6aaaf;
+  line-height: 1.5rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.emailField {
+  position: relative;
+  padding: 2rem 1rem 1rem 0;
+}
+.emailInput {
+  width: 100%;
+  height: 50px;
+  border-radius: 1.5rem;
+  border: none;
+  outline: 1px solid #dcc6c8;
+  padding: 0 1.5rem;
+}
+.invalidInput {
+  outline: 2px solid hsl(0, 93%, 68%);
+}
+.valid {
+  display: none;
+}
+.invalid {
+  display: block;
+}
+.emailField input::placeholder {
+  color: #dcc6c8;
+}
+.submitBtn {
+  position: absolute;
+  left: 75%;
+  top: 30%;
+  width: 90px;
+  height: 54px;
+  padding: 0.2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  outline: none;
+  border: none;
+}
+.submitBtn:hover {
+  background: linear-gradient(135deg, #fcdadb, #f8c6c8);
+  filter: drop-shadow(0 8px 10px hsl(0, 74%, 74%));
+}
+.content {
+  width: 60%;
+}
+.logo {
+  margin-top: 1.2rem;
+  margin-bottom: 6rem;
+}
+#text {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  white-space: nowrap;
+  right: 100%;
+  transform: translateX(115%);
+  color: red;
+}
+.iconError {
+  position: absolute;
+  top: 45%;
+  right: 26%;
+}
