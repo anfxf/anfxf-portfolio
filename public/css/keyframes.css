@@ -1,0 +1,39 @@
+@keyframes starterAnime {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes starterImgAnime {
+    0% {
+      opacity: 0;
+      right: -30rem;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scrollBtnAnimation {
+    0% {
+      transform: translateY(15%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes toggleAnim {
+    0%{
+      transform: rotate(15deg) scale(1.1);
+    }
+    50%{
+      transform: rotate(0deg) scale(1);
+    }
+    100%{
+      transform: rotate(15deg) scale(1.1);
+    }
+  }

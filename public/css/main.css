@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Recursive:wght@300;400;500;600;700;800;900&family=Shadows+Into+Light&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-dark-bg: #0A090D;
+  --secondary-dark-bg: #111016;
+  --primary-clr: #F93742;
+  --secondary-clr: #3a3a3a;
+}
+::selection{
+  color: rgb(255, 255, 255);
+  background-color: var(--primary-clr);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+body{
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

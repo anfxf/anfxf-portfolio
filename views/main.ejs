@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/public/css/main.css">
+        <link rel="stylesheet" href="/public/css/keyframes.css">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="/public/css/responsive.css">
+        <title>RunTimeX</title>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav>
+            <a href=""><img class="logo" src="/public/images/Icons/RunTimeX_Dark.png"></a>
+            <div class="navbar" style="display: none;">
+                <a href="/" class="navItem active_nav">Home</a>
+                <a href="#about" class="navItem">About</a>
+                <a href="#projects" class="navItem">Projects</a>
+                <a href="#footer" class="navItem">Footer</a>
+            </div>
+            <a class="navToggle" href="#"><img id="navTogglerImg" src="/public/images/Icons/Menu.png"></a>
+        </nav>
+        
+        <!-- Home Section -->
+        <section id="home" class="hero_section">
+            <div class="text_content">
+                <h1>RUNTIME<span>X</span></h1>
+                <div class="scrollBtn">
+                    <a href="#about">
+                        <img class="btn" src="/public/images/Icons/Scroll.svg">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about_section">
+            <div class="about_section_left">
+                <div class="about_pic_container">
+                    <img class="about_pic" src="/public/images/Photos/aboutImg.jpg" alt="">
+                </div>
+            </div>
+           <div class="about_section_right">
+               <h1>About Me</h1>
+               <h3 class="about_job"> <> Web Designer <<span>/</span>> && print("Programmer") && Gamer</h3>
+               <h3 class="about_me">I am Praveen K Leema,
+                                <br>I am a Programmer and a Web Designer,
+                                <br>Now I am currently learning Game Development.
+                </h3>
+                <div class="viewBtn">
+                    <a class="btn" href="#projects">Projects</a>
+                </div>
+           </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects_section">
+            <div class="project_section_heading">
+                <h1>Projects</h1>
+            </div>
+            <div class="projects_container">
+                
+                <% for(i in data) {%>
+                    <% for(x in data[i]) {%>
+                        <h1 class="project_topics"><%= x %></h1>
+                        <hr class="project_topic_hr">
+                        <div class="project_row">
+                        
+                        <% for(y in data[i][x] ) {%>
+                            <a href="<%= data[i][x][y]['link'] %>" class="project_col">
+                                <img src="<%= data[i][x][y]['image'] %>">
+                            </a>
+                        <% } %>
+                        </div>
+
+                    <% } %>
+                <% } %>
+
+
+            </div>
+        </section>
+        
+
+        <section id="footer" class="footer__Container">
+            <div class="footer_top">
+                <h1>"Assess your ability in each skill as accurately as you can.<br>Ask yourself if you have used this skill a little or a lot."</h1>
+            </div>
+            <!-- <div class="footer_bottom"></div> -->
+        </section>
+
+        <!-- JQuery -->
+        <script src="/public/js/jquery-3.3.1.js"></script>
+        <!-- JS -->
+        <script type="text/javascript" src="/public/JS/app.js"></script>
+    </body>
+</html>
